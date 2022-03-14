@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.foodappproject.Database.DBHelper;
+import com.example.foodappproject.database.DBHelper;
 
 public class LoginActivity extends AppCompatActivity {
     EditText email,password;

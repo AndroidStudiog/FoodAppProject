@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.foodappproject.Database.DBHelper;
+import com.example.foodappproject.database.DBHelper;
 
 public class RegistrationActivity extends AppCompatActivity {
     EditText name,email,password;

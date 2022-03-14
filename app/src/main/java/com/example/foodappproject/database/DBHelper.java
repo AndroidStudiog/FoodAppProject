@@ -1,4 +1,4 @@
-package com.example.foodappproject.Database;
+package com.example.foodappproject.database;
 
 import android.content.ContentValues;
 import android.content.Context;
