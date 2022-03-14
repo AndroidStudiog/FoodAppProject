@@ -1,4 +1,4 @@
-package com.example.foodappproject.ui.gallery;
+package com.example.foodappproject.ui.DailyMeal;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
