@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.foodappproject.Database.DBHelper;
+
 public class RegistrationActivity extends AppCompatActivity {
     EditText name,email,password;
     Button register;
@@ -23,11 +25,35 @@ public class RegistrationActivity extends AppCompatActivity {
         email=(EditText) findViewById(R.id.txt_reg_email);
         password=(EditText)findViewById(R.id.txt_reg_password);
 
+        DBHelper helper=new DBHelper(this);
+
         register=(Button) findViewById(R.id.btn_register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String Name=name.getText().toString();
+                String Email=email.getText().toString();
+                String Password=password.getText().toString();
+                if (Name.equals("") || Email.equals("") || Password.equals("")){
+                    Toast.makeText(RegistrationActivity.this, "Please fill all Field.", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    boolean i=helper.checkEmail(Email);
+                    if (i==false){
+                        boolean checkInsert=helper.insertUserData(Name,Email,Password);
+                        if (checkInsert==true){
+                            Toast.makeText(RegistrationActivity.this, "Your Account have been Created.", Toast.LENGTH_SHORT).show();
+                            Intent reg=new Intent(RegistrationActivity.this,LoginActivity.class);
+                            startActivity(reg);
+                        }
+                        else{
+                            Toast.makeText(RegistrationActivity.this, "Your Account have been not Created.", Toast.LENGTH_SHORT);
+                        }
+                    }
+                    else{
+                        Toast.makeText(RegistrationActivity.this, "Please choose another Email.", Toast.LENGTH_SHORT).show();
+                    }
+                }
 
                 Intent intent=new Intent(RegistrationActivity.this,LoginActivity.class);
                 startActivity(intent);
