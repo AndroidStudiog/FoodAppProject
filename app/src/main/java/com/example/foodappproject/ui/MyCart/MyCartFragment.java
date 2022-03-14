@@ -1,4 +1,4 @@
-package com.example.foodappproject;
+package com.example.foodappproject.ui.MyCart;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.foodappproject.R;
 
 public class MyCartFragment extends Fragment {
 
