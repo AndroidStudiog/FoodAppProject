@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
+    EditText email,password;
     Button signIn;
     TextView signIn_register;
 
@@ -17,10 +19,15 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        email=(EditText) findViewById(R.id.txt_login_email);
+        password=(EditText) findViewById(R.id.txt_login_password);
+
         signIn=(Button) findViewById(R.id.btn_signIn);
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 Intent intent=new Intent(LoginActivity.this,MainActivity.class);
                 startActivity(intent);
                 Toast.makeText(LoginActivity.this, "Login is Successfully.", Toast.LENGTH_SHORT).show();
