@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.foodappproject.ui.gallery.GalleryFragment"
+        android:name="com.example.foodappproject.ui.gallery.DailyMealFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/daily_meal_fragment" />
 
     <fragment
         android:id="@+id/nav_slideshow"
