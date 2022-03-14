@@ -1,4 +1,4 @@
-package com.example.foodappproject.ui.MyCart;
+package com.example.foodappproject.ui.myCart;
 
 import android.os.Bundle;
 

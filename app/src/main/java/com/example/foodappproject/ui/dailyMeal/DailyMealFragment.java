@@ -1,4 +1,4 @@
-package com.example.foodappproject.ui.Favourite;
+package com.example.foodappproject.ui.dailyMeal;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,11 +10,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.foodappproject.R;
 
-public class FavouriteFragment extends Fragment {
+public class DailyMealFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        View root= inflater.inflate(R.layout.fragment_favourite, container, false);
+        View root = inflater.inflate(R.layout.fragment_daily_meal, container, false);
         return root;
     }
 }

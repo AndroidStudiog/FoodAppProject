@@ -1,8 +1,10 @@
 package com.example.foodappproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -17,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.foodappproject.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+//    Button logout;
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -24,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*
+        logout=(Button) findViewById(R.id.btn_nav_logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,WelcomeActivity.class);
+                startActivity(intent);
+            }
+        });
+        */
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
