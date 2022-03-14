@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegistrationActivity extends AppCompatActivity {
+    EditText name,email,password;
     Button register;
     TextView register_sign_in;
 
@@ -17,10 +19,16 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        name=(EditText) findViewById(R.id.txt_reg_fullName);
+        email=(EditText) findViewById(R.id.txt_reg_email);
+        password=(EditText)findViewById(R.id.txt_reg_password);
+
         register=(Button) findViewById(R.id.btn_register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 Intent intent=new Intent(RegistrationActivity.this,LoginActivity.class);
                 startActivity(intent);
                 Toast.makeText(RegistrationActivity.this, "Account is created.", Toast.LENGTH_SHORT).show();
