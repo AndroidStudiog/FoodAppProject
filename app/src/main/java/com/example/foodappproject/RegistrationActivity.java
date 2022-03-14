@@ -42,9 +42,9 @@ public class RegistrationActivity extends AppCompatActivity {
                     if (i==false){
                         boolean checkInsert=helper.insertUserData(Name,Email,Password);
                         if (checkInsert==true){
-                            Toast.makeText(RegistrationActivity.this, "Your Account have been Created.", Toast.LENGTH_SHORT).show();
-                            Intent reg=new Intent(RegistrationActivity.this,LoginActivity.class);
-                            startActivity(reg);
+                            Intent intent=new Intent(RegistrationActivity.this,LoginActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(RegistrationActivity.this, "Account is created.", Toast.LENGTH_SHORT).show();
                         }
                         else{
                             Toast.makeText(RegistrationActivity.this, "Your Account have been not Created.", Toast.LENGTH_SHORT);
@@ -54,10 +54,6 @@ public class RegistrationActivity extends AppCompatActivity {
                         Toast.makeText(RegistrationActivity.this, "Please choose another Email.", Toast.LENGTH_SHORT).show();
                     }
                 }
-
-                Intent intent=new Intent(RegistrationActivity.this,LoginActivity.class);
-                startActivity(intent);
-                Toast.makeText(RegistrationActivity.this, "Account is created.", Toast.LENGTH_SHORT).show();
             }
         });
 

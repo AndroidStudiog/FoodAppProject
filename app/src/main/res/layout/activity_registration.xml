@@ -50,7 +50,9 @@
             android:drawableLeft="@drawable/account_circle"
             android:drawablePadding="13dp"
             android:hint="@string/full_name"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            />
 
         <EditText
             android:id="@+id/txt_reg_email"
@@ -61,7 +63,9 @@
             android:drawableLeft="@drawable/email"
             android:drawablePadding="13dp"
             android:hint="@string/email"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            />
 
         <EditText
             android:id="@+id/txt_reg_password"
@@ -72,7 +76,9 @@
             android:drawableLeft="@drawable/vpn_key"
             android:drawablePadding="13dp"
             android:hint="@string/password"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            />
 
         <Button
             android:id="@+id/btn_register"
