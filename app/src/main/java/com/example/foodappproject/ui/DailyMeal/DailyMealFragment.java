@@ -13,7 +13,7 @@ import com.example.foodappproject.R;
 public class DailyMealFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.daily_meal_fragment, container, false);
+        View root = inflater.inflate(R.layout.fragment_daily_meal, container, false);
         return root;
     }
 }
