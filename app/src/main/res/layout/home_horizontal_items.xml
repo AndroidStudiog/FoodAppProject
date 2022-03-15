@@ -16,13 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="@color/gray"
             >
             <ImageView
                 android:id="@+id/hor_img"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/food1"
+                android:src="@drawable/pizza"
                 android:layout_gravity="center"
+                android:layout_marginTop="5dp"
                 />
             <TextView
                 android:id="@+id/hor_text"

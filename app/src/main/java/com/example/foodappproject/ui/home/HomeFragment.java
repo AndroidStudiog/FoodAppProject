@@ -30,11 +30,11 @@ public class HomeFragment extends Fragment {
 
         ArrayList<HomeHorModel> list=new ArrayList<>();
 
-        list.add(new HomeHorModel(R.drawable.food1,"Burger"));
-        list.add(new HomeHorModel(R.drawable.food1,"Burger"));
-        list.add(new HomeHorModel(R.drawable.food1,"Burger"));
-        list.add(new HomeHorModel(R.drawable.food1,"Burger"));
-        list.add(new HomeHorModel(R.drawable.food1,"Burger"));
+        list.add(new HomeHorModel(R.drawable.pizza,"Pizza"));
+        list.add(new HomeHorModel(R.drawable.pizza,"Pizza"));
+        list.add(new HomeHorModel(R.drawable.pizza,"Pizza"));
+        list.add(new HomeHorModel(R.drawable.pizza,"Pizza"));
+        list.add(new HomeHorModel(R.drawable.pizza,"Pizza"));
 
         HomeHorAdapter adapter=new HomeHorAdapter(list,getContext());
         recycleVew.setAdapter(adapter);
