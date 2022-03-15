@@ -25,4 +25,6 @@
     <string name="menu_favourite">Favourite</string>
     <string name="menu_my_cart">My cart</string>
     <string name="menu_logout">Log Out</string>
+
+    <string name="_10_00_23_00">10:00-23:00</string>
 </resources>
