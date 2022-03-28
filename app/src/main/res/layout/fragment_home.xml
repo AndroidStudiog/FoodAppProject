@@ -19,7 +19,7 @@
             >
 
             <EditText
-                android:layout_width="300dp"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
                 android:background="@drawable/search_bg"
