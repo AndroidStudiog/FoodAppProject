@@ -120,7 +120,6 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
                 }
             }
         });
-
         if (select) {
             if (position == 0) {
                 holder.cardView.setBackgroundResource(R.drawable.change_bg);
