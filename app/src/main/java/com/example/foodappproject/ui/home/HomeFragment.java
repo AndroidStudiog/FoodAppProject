@@ -15,13 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.foodappproject.R;
 import com.example.foodappproject.adapters.HomeHorAdapter;
 import com.example.foodappproject.adapters.HomeVerAdapter;
+import com.example.foodappproject.adapters.UpdateVerticalRec;
 import com.example.foodappproject.databinding.FragmentHomeBinding;
 import com.example.foodappproject.models.HomeHorModel;
 import com.example.foodappproject.models.HomeVerModel;
 
 import java.util.ArrayList;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements UpdateVerticalRec {
     RecyclerView hor_RecycleVew, ver_RecycleVew;
 
     @Override
@@ -32,40 +33,40 @@ public class HomeFragment extends Fragment {
 
         //////////Horizontal RecycleView
 
-        hor_RecycleVew = (RecyclerView) view.findViewById(R.id.home_hor_rec);
+        hor_RecycleVew=(RecyclerView) view.findViewById(R.id.home_hor_rec);
 
-        ArrayList<HomeHorModel> list1 = new ArrayList<>();
+        ArrayList<HomeHorModel> list1=new ArrayList<>();
 
-        list1.add(new HomeHorModel(R.drawable.pizza, "Pizza"));
-        list1.add(new HomeHorModel(R.drawable.pizza, "Pizza"));
-        list1.add(new HomeHorModel(R.drawable.pizza, "Pizza"));
-        list1.add(new HomeHorModel(R.drawable.pizza, "Pizza"));
-        list1.add(new HomeHorModel(R.drawable.pizza, "Pizza"));
+        list1.add(new HomeHorModel(R.drawable.c_pizza,"Pizza"));
+        list1.add(new HomeHorModel(R.drawable.c_burger,"Pizza"));
+        list1.add(new HomeHorModel(R.drawable.c_fries,"Pizza"));
+        list1.add(new HomeHorModel(R.drawable.c_ice_cream,"Pizza"));
+        list1.add(new HomeHorModel(R.drawable.c_sandwich,"Pizza"));
 
-        HomeHorAdapter adapter1 = new HomeHorAdapter(list1, getContext());
+        HomeHorAdapter adapter1=new HomeHorAdapter(list1,getActivity(),this);
         hor_RecycleVew.setAdapter(adapter1);
 
-        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager linearLayoutManager1=new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
         hor_RecycleVew.setLayoutManager(linearLayoutManager1);
 
         //////////Vertical RecycleView
 
-        ver_RecycleVew = (RecyclerView) view.findViewById(R.id.home_ver_rec);
+        ver_RecycleVew=(RecyclerView) view.findViewById(R.id.home_ver_rec);
 
-        ArrayList<HomeVerModel> list2 = new ArrayList<>();
+        ArrayList<HomeVerModel> list2=new ArrayList<>();
 
-        list2.add(new HomeVerModel(R.drawable.food1, "Burger", "10:00 - 23:00", "5.0", "Min - $60"));
-        list2.add(new HomeVerModel(R.drawable.food1, "Burger", "10:00 - 23:00", "5.0", "Min - $60"));
-        list2.add(new HomeVerModel(R.drawable.food1, "Burger", "10:00 - 23:00", "5.0", "Min - $60"));
-        list2.add(new HomeVerModel(R.drawable.food1, "Burger", "10:00 - 23:00", "5.0", "Min - $60"));
-        list2.add(new HomeVerModel(R.drawable.food1, "Burger", "10:00 - 23:00", "5.0", "Min - $60"));
-
-        HomeVerAdapter adapter2 = new HomeVerAdapter(list2, getContext());
+        HomeVerAdapter adapter2=new HomeVerAdapter(list2,getContext());
         ver_RecycleVew.setAdapter(adapter2);
 
-        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager linearLayoutManager2=new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         ver_RecycleVew.setLayoutManager(linearLayoutManager2);
 
         return view;
+    }
+
+    @Override
+    public void callBack(ArrayList<HomeVerModel> list, int position) {
+        HomeVerAdapter adapter3=new HomeVerAdapter(list,getContext());
+        ver_RecycleVew.setAdapter(adapter3);
     }
 }
