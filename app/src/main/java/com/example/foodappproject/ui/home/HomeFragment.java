@@ -67,6 +67,7 @@ public class HomeFragment extends Fragment implements UpdateVerticalRec {
     @Override
     public void callBack(ArrayList<HomeVerModel> list, int position) {
         HomeVerAdapter adapter3=new HomeVerAdapter(list,getContext());
+        adapter3.notifyDataSetChanged();
         ver_RecycleVew.setAdapter(adapter3);
     }
 }
