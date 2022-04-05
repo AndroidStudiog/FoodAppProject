@@ -4,7 +4,6 @@ public class User {
     String name;
     String email;
     String password;
-    String type;
 
     public User(String name, String email, String password) {
         this.name = name;
