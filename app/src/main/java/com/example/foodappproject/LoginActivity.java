@@ -1,7 +1,9 @@
 package com.example.foodappproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,11 +13,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.foodappproject.database.DBHelper;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     EditText email,password;
     Button signIn;
     TextView signIn_register;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +31,38 @@ public class LoginActivity extends AppCompatActivity {
         email=(EditText) findViewById(R.id.txt_login_email);
         password=(EditText) findViewById(R.id.txt_login_password);
 
-        DBHelper helper=new DBHelper(this);
+        //    DBHelper helper=new DBHelper(this);
+
+        auth=FirebaseAuth.getInstance();
+
+        ProgressDialog dialog=new ProgressDialog(LoginActivity.this);
+        dialog.setTitle("Login");
+        dialog.setMessage("Login to your account.");
 
         signIn=(Button) findViewById(R.id.btn_signIn);
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                dialog.show();
+
                 String Email=email.getText().toString();
                 String Password=password.getText().toString();
+
+                auth.signInWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(LoginActivity.this, "Login is Successfully.", Toast.LENGTH_SHORT).show();
+                            Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+                            startActivity(intent);
+                        }
+                        else {
+                            Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                        dialog.dismiss();
+                    }
+                });
+                /*
                 if (Email.equals("") || Password.equals("")){
                     Toast.makeText(LoginActivity.this, "Please fill all Field.", Toast.LENGTH_SHORT).show();
                 }
@@ -46,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "Login is not Successfully.", Toast.LENGTH_SHORT).show();
                     }
                 }
+                 */
             }
         });
 
