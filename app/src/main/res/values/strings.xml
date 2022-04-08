@@ -27,4 +27,6 @@
     <string name="menu_logout">Log Out</string>
 
     <string name="_10_00_23_00">10:00-23:00</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
