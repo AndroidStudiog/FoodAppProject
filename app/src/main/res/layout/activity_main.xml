@@ -24,6 +24,7 @@
         app:menu="@menu/activity_main_drawer"
         android:background="@color/gray"
         app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
         >
         <Button
             android:id="@+id/btn_nav_logout"
