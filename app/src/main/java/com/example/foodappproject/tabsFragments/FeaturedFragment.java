@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 
 import com.example.foodappproject.R;
 import com.example.foodappproject.adapters.FeaturedHorAdapter;
+import com.example.foodappproject.adapters.FeaturedVerAdapter;
 import com.example.foodappproject.models.FeaturedHorModel;
+import com.example.foodappproject.models.FeaturedVerModel;
 
 import java.util.ArrayList;
 
@@ -41,6 +43,23 @@ public class FeaturedFragment extends Fragment {
 
         LinearLayoutManager linearLayoutManager1=new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
         featured_hor_recyclerView.setLayoutManager(linearLayoutManager1);
+
+        // Featured Ver RecyclerView
+
+        featured_ver_recyclerView=(RecyclerView) view.findViewById(R.id.featured_ver_rec);
+
+        ArrayList<FeaturedVerModel> list2=new ArrayList<>();
+        list2.add(new FeaturedVerModel(R.drawable.pizza_bottle,"Featured 1","Description 1","5.0","10:00 - 7:00"));
+        list2.add(new FeaturedVerModel(R.drawable.burger,"Featured 2","Description 2","5.0","10:00 - 7:00"));
+        list2.add(new FeaturedVerModel(R.drawable.ice_cream,"Featured 3","Description 3","5.0","10:00 - 7:00"));
+        list2.add(new FeaturedVerModel(R.drawable.pizza_bottle,"Featured 4","Description 4","5.0","10:00 - 7:00"));
+        list2.add(new FeaturedVerModel(R.drawable.pizza_bottle,"Featured 5","Description 5","5.0","10:00 - 7:00"));
+
+        FeaturedVerAdapter adapter2=new FeaturedVerAdapter(list2,getContext());
+        featured_ver_recyclerView.setAdapter(adapter2);
+
+        LinearLayoutManager linearLayoutManager2=new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+        featured_ver_recyclerView.setLayoutManager(linearLayoutManager2);
 
         return view;
     }
