@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/detailed_img"
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+                android:src="@drawable/pizza"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="24dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/detailed_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/amarante"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/detailed_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/amarante"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    >
+                    <ImageView
+                        android:id="@+id/detailed_star"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/star"
+                        app:tint="@color/purple_500"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="2dp"
+                        />
+                    <TextView
+                        android:id="@+id/detailed_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5.0"
+                        android:textStyle="bold"
+                        />
+                    <ImageView
+                        android:id="@+id/detailed_clock"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/clock"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="2dp"
+                        app:tint="@color/purple_500" />
+                    <TextView
+                        android:id="@+id/detailed_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:00 - 7:00"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/detailed_dollar"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/dollar"
+                        android:layout_gravity="center_vertical"
+                        app:tint="@color/purple_500" />
+                    <TextView
+                        android:id="@+id/detailed_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120.0"
+                        android:textStyle="bold"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        />
+                    <Button
+                        android:id="@+id/detailed_add_to_cart"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Add To Cart"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/amarante"
+                        android:textStyle="bold"
+                        android:layout_marginRight="5dp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
