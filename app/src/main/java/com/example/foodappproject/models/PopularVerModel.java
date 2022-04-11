@@ -1,13 +1,13 @@
 package com.example.foodappproject.models;
 
-public class Popular_Ver_Model {
+public class PopularVerModel {
     int image;
     String name;
     String description;
     String rating;
     String timing;
 
-    public Popular_Ver_Model(int image, String name, String description, String rating, String timing) {
+    public PopularVerModel(int image, String name, String description, String rating, String timing) {
         this.image = image;
         this.name = name;
         this.description = description;
