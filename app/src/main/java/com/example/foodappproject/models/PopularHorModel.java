@@ -1,7 +1,6 @@
 package com.example.foodappproject.models;
 
 public class PopularHorModel {
-
     int image;
     String description;
     String name;
