@@ -1,6 +1,7 @@
 package com.example.foodappproject.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.foodappproject.DetailedDailyMealActivity;
 import com.example.foodappproject.R;
 import com.example.foodappproject.models.DailyMealModel;
 
@@ -38,7 +40,7 @@ public class DailyMealAdapter extends RecyclerView.Adapter<DailyMealAdapter.View
         holder.name.setText(mdl.getName());
         holder.description.setText(mdl.getDescription());
         holder.discount.setText(mdl.getDiscount());
-/*
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +49,6 @@ public class DailyMealAdapter extends RecyclerView.Adapter<DailyMealAdapter.View
                 context.startActivity(intent);
             }
         });
- */
     }
 
     @Override
