@@ -32,11 +32,11 @@ public class PopularFragment extends Fragment {
         popular_hor_recyclerView=(RecyclerView) view.findViewById(R.id.popular_hor_rec);
 
         ArrayList<PopularHorModel> list1=new ArrayList<>();
-        list1.add(new PopularHorModel(R.drawable.burger,"Popular 1","Description 1"));
-        list1.add(new PopularHorModel(R.drawable.pizza,"Popular 2","Description 2"));
-        list1.add(new PopularHorModel(R.drawable.ice_cream,"Popular 3","Description 3"));
-        list1.add(new PopularHorModel(R.drawable.pizza,"Popular 3","Description 3"));
-        list1.add(new PopularHorModel(R.drawable.pizza_bottle,"Popular 3","Description 3"));
+        list1.add(new PopularHorModel(R.drawable.burger,"Description 1","Popular 1"));
+        list1.add(new PopularHorModel(R.drawable.pizza,"Description 2","Popular 2"));
+        list1.add(new PopularHorModel(R.drawable.ice_cream,"Description 3","Popular 3"));
+        list1.add(new PopularHorModel(R.drawable.pizza,"Description 4","Popular 4"));
+        list1.add(new PopularHorModel(R.drawable.pizza_bottle,"Description 5","Popular 5"));
 
         PopularHorAdapter adapter1=new PopularHorAdapter(list1,getContext());
         popular_hor_recyclerView.setAdapter(adapter1);
