@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodAppProject">
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".DetailedDailyMealActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailedDailyMealActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
@@ -22,7 +22,7 @@
             android:name=".RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
