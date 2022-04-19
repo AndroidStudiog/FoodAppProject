@@ -32,11 +32,11 @@ public class FeaturedFragment extends Fragment {
         featured_hor_recyclerView=(RecyclerView) view.findViewById(R.id.featured_hor_rec);
 
         ArrayList<FeaturedHorModel> list1=new ArrayList<>();
-        list1.add(new FeaturedHorModel(R.drawable.pizza_bottle,"Featured 1","Description 1"));
-        list1.add(new FeaturedHorModel(R.drawable.burger,"Featured 2","Description 2"));
-        list1.add(new FeaturedHorModel(R.drawable.ice_cream,"Featured 3","Description 3"));
-        list1.add(new FeaturedHorModel(R.drawable.burger,"Featured 3","Description 3"));
-        list1.add(new FeaturedHorModel(R.drawable.pizza_bottle,"Featured 3","Description 3"));
+        list1.add(new FeaturedHorModel(R.drawable.pizza_bottle,"Description 1","Featured 1"));
+        list1.add(new FeaturedHorModel(R.drawable.burger,"Description 2","Featured 2"));
+        list1.add(new FeaturedHorModel(R.drawable.ice_cream,"Description 3","Featured 3"));
+        list1.add(new FeaturedHorModel(R.drawable.burger,"Description 4","Featured 4"));
+        list1.add(new FeaturedHorModel(R.drawable.pizza_bottle,"Description 5","Featured 5"));
 
         FeaturedHorAdapter adapter1=new FeaturedHorAdapter(list1,getContext());
         featured_hor_recyclerView.setAdapter(adapter1);
