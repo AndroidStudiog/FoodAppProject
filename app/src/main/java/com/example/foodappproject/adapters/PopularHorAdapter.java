@@ -15,11 +15,11 @@ import com.example.foodappproject.models.PopularHorModel;
 
 import java.util.ArrayList;
 
-public class Popular_Hor_Adapter extends RecyclerView.Adapter<Popular_Hor_Adapter.ViewHolder> {
+public class PopularHorAdapter extends RecyclerView.Adapter<PopularHorAdapter.ViewHolder> {
     ArrayList<PopularHorModel> list;
     Context context;
 
-    public Popular_Hor_Adapter(ArrayList<PopularHorModel> list, Context context) {
+    public PopularHorAdapter(ArrayList<PopularHorModel> list, Context context) {
         this.list = list;
         this.context = context;
     }
