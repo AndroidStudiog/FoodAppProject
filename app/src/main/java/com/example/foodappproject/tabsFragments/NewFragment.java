@@ -33,11 +33,11 @@ public class NewFragment extends Fragment {
         new_hor_recyclerView=(RecyclerView) view.findViewById(R.id.new_hor_rec);
 
         ArrayList<NewHorModel> list1=new ArrayList<>();
-        list1.add(new NewHorModel(R.drawable.ice_cream,"New 1","Description 1"));
-        list1.add(new NewHorModel(R.drawable.burger,"New 2","Description 2"));
-        list1.add(new NewHorModel(R.drawable.ice_cream,"New 3","Description 3"));
-        list1.add(new NewHorModel(R.drawable.pizza,"New 3","Description 3"));
-        list1.add(new NewHorModel(R.drawable.pizza_bottle,"New 3","Description 3"));
+        list1.add(new NewHorModel(R.drawable.ice_cream,"Description 1","New 1"));
+        list1.add(new NewHorModel(R.drawable.burger,"Description 2","New 2"));
+        list1.add(new NewHorModel(R.drawable.ice_cream,"Description 3","New 3"));
+        list1.add(new NewHorModel(R.drawable.pizza,"Description 4","New 4"));
+        list1.add(new NewHorModel(R.drawable.pizza_bottle,"Description 5","New 5"));
 
         NewHorAdapter adapter1=new NewHorAdapter(list1,getContext());
         new_hor_recyclerView.setAdapter(adapter1);
