@@ -11,6 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.foodappproject.R;
+import com.example.foodappproject.adapters.PopularHorAdapter;
+import com.example.foodappproject.adapters.PopularVerAdapter;
+import com.example.foodappproject.models.PopularHorModel;
+import com.example.foodappproject.models.PopularVerModel;
 
 import java.util.ArrayList;
 
