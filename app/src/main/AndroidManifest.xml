@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodAppProject">
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeActivity"
             android:exported="false" />
         <activity
             android:name=".DetailedDailyMealActivity"
