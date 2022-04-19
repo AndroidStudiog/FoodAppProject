@@ -2,6 +2,7 @@ package com.example.foodappproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class SplashScreen extends AppCompatActivity {
@@ -10,5 +11,19 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+        Thread thread=new Thread(){
+            public void run(){
+                try {
+                    sleep(3000);
+                    finish();
+                    Intent spl=new Intent(SplashScreen.this,WelcomeActivity.class);
+                    startActivity(spl);
+                }
+                catch (Exception e){
+                }
+            }
+        };
+        thread.start();
     }
 }
