@@ -27,9 +27,8 @@ public class FragmentAdapter extends FragmentPagerAdapter {
                 return new PopularFragment();
             case 2:
                 return new NewFragment();
-            default:
-                return new FeaturedFragment();
         }
+        return new FeaturedFragment();
     }
     @Override
     public int getCount() {

@@ -40,7 +40,7 @@ public class FavouriteFragment extends Fragment {
 
         view_pager = (ViewPager) view.findViewById(R.id.viewPager);
 
-        FragmentManager fragmentManager = getParentFragmentManager();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentAdapter adapter = new FragmentAdapter(fragmentManager);
         view_pager.setAdapter(adapter);
 
