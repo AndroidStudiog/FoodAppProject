@@ -47,6 +47,27 @@ public class FavouriteFragment extends Fragment {
 
         tab_layout = (TabLayout) view.findViewById(R.id.tabLayout);
 
+        tab_layout.addTab(tab_layout.newTab().setText("Featured"));
+        tab_layout.addTab(tab_layout.newTab().setText("Popular"));
+        tab_layout.addTab(tab_layout.newTab().setText("New"));
+
+        tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                view_pager2.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
         return view;
     }
 }
