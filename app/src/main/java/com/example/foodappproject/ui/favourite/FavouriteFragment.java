@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.foodappproject.MainActivity;
 import com.example.foodappproject.R;
@@ -20,7 +21,7 @@ import com.google.android.material.tabs.TabLayout;
 public class FavouriteFragment extends Fragment {
     TextView more;
     TabLayout tab_layout;
-    ViewPager view_pager;
+    ViewPager2 view_pager2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,14 +39,13 @@ public class FavouriteFragment extends Fragment {
             }
         });
 
-        view_pager = (ViewPager) view.findViewById(R.id.viewPager);
+        view_pager2 = (ViewPager2) view.findViewById(R.id.viewPager2);
 
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        FragmentAdapter adapter = new FragmentAdapter(fragmentManager);
-        view_pager.setAdapter(adapter);
+        FragmentAdapter adapter = new FragmentAdapter(fragmentManager,getLifecycle());
+        view_pager2.setAdapter(adapter);
 
         tab_layout = (TabLayout) view.findViewById(R.id.tabLayout);
-        tab_layout.setupWithViewPager(view_pager);
 
         return view;
     }
