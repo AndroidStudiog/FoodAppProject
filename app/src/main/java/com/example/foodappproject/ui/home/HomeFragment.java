@@ -38,10 +38,10 @@ public class HomeFragment extends Fragment implements UpdateVerticalRec {
         ArrayList<HomeHorModel> list1=new ArrayList<>();
 
         list1.add(new HomeHorModel(R.drawable.c_pizza,"Pizza"));
-        list1.add(new HomeHorModel(R.drawable.c_burger,"Pizza"));
-        list1.add(new HomeHorModel(R.drawable.c_fries,"Pizza"));
-        list1.add(new HomeHorModel(R.drawable.c_ice_cream,"Pizza"));
-        list1.add(new HomeHorModel(R.drawable.c_sandwich,"Pizza"));
+        list1.add(new HomeHorModel(R.drawable.c_burger,"Burger"));
+        list1.add(new HomeHorModel(R.drawable.c_fries,"Fries"));
+        list1.add(new HomeHorModel(R.drawable.c_ice_cream,"Ice Cream"));
+        list1.add(new HomeHorModel(R.drawable.c_sandwich,"Sandwich"));
 
         HomeHorAdapter adapter1=new HomeHorAdapter(list1,getActivity(),this);
         hor_RecycleVew.setAdapter(adapter1);

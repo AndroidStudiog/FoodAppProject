@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         /*
+        getLayoutInflater().inflate(R.layout.activity_main,null);
         logout=(Button) findViewById(R.id.btn_nav_logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        */
+         */
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

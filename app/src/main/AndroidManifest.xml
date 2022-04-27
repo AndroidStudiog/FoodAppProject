@@ -13,16 +13,19 @@
             android:name=".DetailedDailyMealActivity"
             android:exported="false" />
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".SplashScreen"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.FoodAppProject.NoActionBar">
