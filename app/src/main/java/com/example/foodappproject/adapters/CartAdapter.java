@@ -36,7 +36,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         CartModel mdl=list.get(position);
         holder.image.setImageResource(mdl.getImage());
         holder.name.setText(mdl.getName());
-        holder.rating.setText(mdl.getRating());
+        holder.order.setText(mdl.getOrderNumber());
         holder.timing.setText(mdl.getPrice());
     }
 
@@ -47,13 +47,13 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView image;
-        TextView name,rating,timing;
+        TextView name,order,timing;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             image=(ImageView) itemView.findViewById(R.id.cart_img);
             name=(TextView) itemView.findViewById(R.id.cart_name);
-            rating=(TextView) itemView.findViewById(R.id.cart_rating);
+            order=(TextView) itemView.findViewById(R.id.orderNumber);
             timing=(TextView) itemView.findViewById(R.id.cart_price);
         }
     }
