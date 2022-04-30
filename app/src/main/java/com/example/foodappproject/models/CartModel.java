@@ -3,13 +3,17 @@ package com.example.foodappproject.models;
 public class CartModel {
     int image;
     String name;
-    String rating;
+    String orderNumber;
     String price;
 
-    public CartModel(int image, String name, String rating, String price) {
+    public CartModel(){
+
+    }
+
+    public CartModel(int image, String name, String orderNumber, String price) {
         this.image = image;
         this.name = name;
-        this.rating = rating;
+        this.orderNumber = orderNumber;
         this.price = price;
     }
 
@@ -29,12 +33,12 @@ public class CartModel {
         this.name = name;
     }
 
-    public String getRating() {
-        return rating;
+    public String getOrderNumber() {
+        return orderNumber;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     public String getPrice() {
