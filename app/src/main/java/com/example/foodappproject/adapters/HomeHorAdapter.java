@@ -70,11 +70,11 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
                 if (position == 0) {
                     ArrayList<HomeVerModel> list = new ArrayList<>();
 
-                    list.add(new HomeVerModel(R.drawable.pizza, "Pizza", "10:00 - 23:00", "5.0", "120"));
-                    list.add(new HomeVerModel(R.drawable.pizza_bottle, "Pizza & Bottle", "10:00 - 23:00", "5.0", "120"));
-                    list.add(new HomeVerModel(R.drawable.pizza, "Pizza", "10:00 - 23:00", "5.0", "120"));
-                    list.add(new HomeVerModel(R.drawable.pizza, "Pizza", "10:00 - 23:00", "5.0", " 120"));
-                    list.add(new HomeVerModel(R.drawable.pizza, "Pizza", "10:00 - 23:00", "5.0", "120"));
+                    list.add(new HomeVerModel(R.drawable.pizza, "Pizza", "10:00 - 23:00", "5.0", "60"));
+                    list.add(new HomeVerModel(R.drawable.pizza_bottle, "Pizza & Bottle", "10:00 - 23:00", "5.0", "60"));
+                    list.add(new HomeVerModel(R.drawable.pizza, "Pizza", "10:00 - 23:00", "5.0", "60"));
+                    list.add(new HomeVerModel(R.drawable.pizza, "Pizza", "10:00 - 23:00", "5.0", "60"));
+                    list.add(new HomeVerModel(R.drawable.pizza, "Pizza", "10:00 - 23:00", "5.0", "60"));
 
                     updateVerticalRec.callBack(list, position);
                 }
