@@ -140,6 +140,8 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
     }
 
     public void searchBox(ArrayList<HomeHorModel> list3) {
+        list=list3;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
