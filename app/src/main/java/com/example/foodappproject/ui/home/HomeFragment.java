@@ -56,7 +56,6 @@ public class HomeFragment extends Fragment implements UpdateVerticalRec {
 
         Intent intent=getActivity().getIntent();
         String mail=intent.getStringExtra("email");
-
         name.setText(mail);
         */
 

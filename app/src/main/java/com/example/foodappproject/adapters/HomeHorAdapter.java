@@ -139,6 +139,9 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
         return list.size();
     }
 
+    public void searchBox(ArrayList<HomeHorModel> list3) {
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image;
         TextView text;
