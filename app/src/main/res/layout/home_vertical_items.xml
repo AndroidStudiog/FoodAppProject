@@ -61,7 +61,7 @@
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
-                <ImageView
+                <AnalogClock
                     android:id="@+id/clock"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -69,10 +69,9 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="5dp"
-                    android:src="@drawable/clock"
-                    app:tint="@color/purple_500" />
+                    />
 
-                <TextView
+                <DigitalClock
                     android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -83,6 +82,17 @@
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
+                <ImageView
+                    android:id="@+id/dollar"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/dollar"
+                    app:tint="@color/purple_500"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginRight="20dp"
+                    />
+
                 <TextView
                     android:id="@+id/price"
                     android:layout_width="wrap_content"
@@ -90,10 +100,11 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="53dp"
                     android:layout_marginRight="10dp"
-                    android:text="Min - $60"
+                    android:text="60"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
             </RelativeLayout>
+
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

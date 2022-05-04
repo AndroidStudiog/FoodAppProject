@@ -75,15 +75,15 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="4dp"
                     >
+
                     <ImageView
                         android:id="@+id/bottom_sheet_star"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:src="@drawable/star"
-                        app:tint="@color/purple_500"
+                        android:layout_width="7dp"
+                        android:layout_height="19dp"
                         android:layout_marginTop="2dp"
                         android:layout_marginRight="2dp"
-                        />
+                        android:src="@drawable/star"
+                        app:tint="@color/purple_500" />
 
                     <TextView
                         android:id="@+id/bottom_sheet_rating"
@@ -101,14 +101,14 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="2dp"
                         app:tint="@color/purple_500" />
-                    <TextView
+
+                    <DigitalClock
                         android:id="@+id/bottom_sheet_time"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:text="10:00 - 7:00"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
