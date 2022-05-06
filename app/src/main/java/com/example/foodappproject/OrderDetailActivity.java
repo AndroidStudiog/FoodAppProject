@@ -47,6 +47,7 @@ public class OrderDetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 quant += 1;
                 quantity.setText(String.format("%d",quant));
+                //
             }
         });
 
