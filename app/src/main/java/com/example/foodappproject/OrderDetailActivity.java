@@ -19,7 +19,8 @@ public class OrderDetailActivity extends AppCompatActivity {
     TextView quantity,food_name,order_description,order_price;
     EditText name_box,phone_box;
     Button order_now;
-    int n=5,i,sum=0;
+
+    int quant=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,17 +41,14 @@ public class OrderDetailActivity extends AppCompatActivity {
         phone_box = (EditText) findViewById(R.id.phoneBox);
 
         order_now = (Button) findViewById(R.id.btn_OrderNow);
-/*
+
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (i=1;i<n;i++){
-                    sum=sum+i;
-                    quantity.setText(sum);
-                }
+                quant += 1;
+                quantity.setText(String.format("%d",quant));
             }
         });
- */
 
         final DBHelper helper = new DBHelper(this);
 
