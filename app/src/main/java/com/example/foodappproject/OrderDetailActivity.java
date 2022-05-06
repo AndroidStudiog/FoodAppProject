@@ -54,8 +54,10 @@ public class OrderDetailActivity extends AppCompatActivity {
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                quant -= 1;
-                quantity.setText(String.format("%d",quant));
+                if (quant>1){
+                    quant -= 1;
+                    quantity.setText(String.format("%d",quant));
+                }
             }
         });
 
