@@ -132,10 +132,10 @@ public class OrderDetailActivity extends AppCompatActivity {
             order_now.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int qua = Integer.parseInt(quantity.getText().toString());
+                //    int qua = Integer.parseInt(quantity.getText().toString());
                     String name = name_box.getText().toString();
                     String phone = phone_box.getText().toString();
-                    Boolean isInserted = helper.insertOrder(image, qua, food, description, name, phone, price);
+                    Boolean isInserted = helper.insertOrder(image, quant, food, description, name, phone, price);
                     if (isInserted) {
                         Toast.makeText(OrderDetailActivity.this, "Order is successful.", Toast.LENGTH_SHORT).show();
                     } else {
