@@ -7,14 +7,16 @@ public class DetailedDailyMealModel {
     String rating;
     String timing;
     String price;
+    String add_to_cart;
 
-    public DetailedDailyMealModel(int image, String name, String description, String rating, String timing, String price) {
+    public DetailedDailyMealModel(int image, String name, String description, String rating, String timing, String price, String add_to_cart) {
         this.image = image;
         this.name = name;
         this.description = description;
         this.rating = rating;
         this.timing = timing;
         this.price = price;
+        this.add_to_cart = add_to_cart;
     }
 
     public int getImage() {
@@ -63,5 +65,13 @@ public class DetailedDailyMealModel {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getAdd_to_cart() {
+        return add_to_cart;
+    }
+
+    public void setAdd_to_cart(String add_to_cart) {
+        this.add_to_cart = add_to_cart;
     }
 }

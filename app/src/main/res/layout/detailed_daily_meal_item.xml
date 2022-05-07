@@ -81,7 +81,7 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="2dp"
                         app:tint="@color/purple_500" />
-                    <TextView
+                    <DigitalClock
                         android:id="@+id/detailed_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -105,19 +105,22 @@
                         android:id="@+id/detailed_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="120.0"
+                        android:text="120"
                         android:textStyle="bold"
                         android:layout_marginTop="1dp"
                         android:layout_weight="1"
                         />
-                    <Button
+                    <TextView
                         android:id="@+id/detailed_add_to_cart"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@color/purple_500"
                         android:text="Add To Cart"
+                        android:textColor="@color/white"
                         android:textSize="10dp"
-                        android:fontFamily="@font/amarante"
                         android:textStyle="bold"
+                        android:fontFamily="@font/amarante"
+                        android:gravity="center"
                         android:layout_marginRight="5dp"
                         />
 

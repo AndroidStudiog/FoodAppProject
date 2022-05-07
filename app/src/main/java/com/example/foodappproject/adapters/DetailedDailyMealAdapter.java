@@ -1,15 +1,18 @@
 package com.example.foodappproject.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.foodappproject.OrderDetailActivity;
 import com.example.foodappproject.R;
 import com.example.foodappproject.models.DetailedDailyMealModel;
 
@@ -40,6 +43,26 @@ public class DetailedDailyMealAdapter extends RecyclerView.Adapter<DetailedDaily
         holder.rating.setText(mdl.getRating());
         holder.timing.setText(mdl.getTiming());
         holder.price.setText(mdl.getPrice());
+        holder.cart_detailed.setText(mdl.getAdd_to_cart());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                holder.cart_detailed.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(context, "Added to a Cart.", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(context, OrderDetailActivity.class);
+                        intent.putExtra("image",mdl.getImage());
+                        intent.putExtra("name",mdl.getName());
+                        intent.putExtra("description",mdl.getDescription());
+                        intent.putExtra("price",mdl.getPrice());
+                        intent.putExtra("type",3);
+                        context.startActivity(intent);
+                    }
+                });
+            }
+        });
     }
 
     @Override
@@ -49,7 +72,7 @@ public class DetailedDailyMealAdapter extends RecyclerView.Adapter<DetailedDaily
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image;
-        TextView name,description,rating,timing,price;
+        TextView name,description,rating,timing,price,cart_detailed;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,6 +82,7 @@ public class DetailedDailyMealAdapter extends RecyclerView.Adapter<DetailedDaily
             rating=(TextView) itemView.findViewById(R.id.detailed_rating);
             timing=(TextView) itemView.findViewById(R.id.detailed_time);
             price=(TextView) itemView.findViewById(R.id.detailed_price);
+            cart_detailed=(TextView) itemView.findViewById(R.id.detailed_add_to_cart);
         }
     }
 }

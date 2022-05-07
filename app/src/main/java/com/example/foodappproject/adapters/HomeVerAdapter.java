@@ -47,7 +47,7 @@ public class HomeVerAdapter extends RecyclerView.Adapter<HomeVerAdapter.ViewHold
         final String mPrice=mdl.getPrice();
 
         holder.image.setImageResource(mdl.getImage());
-        holder.text.setText(mdl.getName());
+        holder.name.setText(mdl.getName());
         holder.timing.setText(mdl.getTiming());
         holder.rating.setText(mdl.getRating());
         holder.price.setText(mdl.getPrice());
@@ -83,8 +83,6 @@ public class HomeVerAdapter extends RecyclerView.Adapter<HomeVerAdapter.ViewHold
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(context, "Added to a Cart.", Toast.LENGTH_SHORT).show();
-
-                        Toast.makeText(context, "Added to a Cart.", Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(context, OrderDetailActivity.class);
                         intent.putExtra("image",mImage);
                         intent.putExtra("name",mName);
@@ -107,11 +105,11 @@ public class HomeVerAdapter extends RecyclerView.Adapter<HomeVerAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView image;
-        TextView text,timing,rating,price;
+        TextView name,timing,rating,price;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             image=(ImageView) itemView.findViewById(R.id.ver_img);
-            text=(TextView) itemView.findViewById(R.id.productName);
+            name=(TextView) itemView.findViewById(R.id.productName);
             timing=(TextView) itemView.findViewById(R.id.time);
             rating=(TextView) itemView.findViewById(R.id.rate);
             price=(TextView) itemView.findViewById(R.id.price);

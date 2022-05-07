@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.foodappproject.R;
 import com.example.foodappproject.adapters.CartAdapter;
+import com.example.foodappproject.database.DBHelper;
 import com.example.foodappproject.models.CartModel;
 
 import java.util.ArrayList;
@@ -27,12 +28,9 @@ public class MyCartFragment extends Fragment {
 
         cart_recyclerView=(RecyclerView) view.findViewById(R.id.cart_rec);
 
-        ArrayList<CartModel> list=new ArrayList<>();
-        list.add(new CartModel(R.drawable.pizza,"Pizza","5.0","60"));
-        list.add(new CartModel(R.drawable.burger,"Burger","5.1","70"));
-        list.add(new CartModel(R.drawable.ice_cream,"Ice Cream","5.2","80"));
-        list.add(new CartModel(R.drawable.pizza,"Pizza","5.2","90"));
-        list.add(new CartModel(R.drawable.pizza_bottle,"Pizza Bottle","5.4","120"));
+        DBHelper helper=new DBHelper(getContext());
+
+        ArrayList<CartModel> list=helper.getOrders();
 
         CartAdapter adapter1=new CartAdapter(list,getContext());
         cart_recyclerView.setAdapter(adapter1);
