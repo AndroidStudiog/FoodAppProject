@@ -9,6 +9,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/daily_meal_recyclerview"
         android:layout_width="match_parent"
-        android:yout_height="wrap_content"/>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
