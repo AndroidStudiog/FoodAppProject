@@ -21,6 +21,7 @@ public class DetailedDailyMealActivity extends AppCompatActivity {
     ImageView image;
     String type;
     FloatingActionButton carts;
+    //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
