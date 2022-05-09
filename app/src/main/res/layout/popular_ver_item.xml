@@ -65,7 +65,7 @@
                         android:src="@drawable/star"
                         app:tint="@color/purple_500"
                         android:layout_marginTop="2dp"
-                        android:layout_marginRight="2dp"
+
                         />
                     <TextView
                         android:id="@+id/popular_ver_rating"
