@@ -15,6 +15,9 @@ public class PopularHorModel {
         return image;
     }
 
+    public void setImage(int image) {
+        this.image = image;
+    }
 
     public String getDescription() {
         return description;
