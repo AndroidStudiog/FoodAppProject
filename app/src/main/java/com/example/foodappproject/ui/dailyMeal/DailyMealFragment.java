@@ -36,6 +36,6 @@ public class DailyMealFragment extends Fragment {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         dailyMeal_recyclerView.setLayoutManager(linearLayoutManager);
 
-        return vw;
+        return view;
     }
 }
