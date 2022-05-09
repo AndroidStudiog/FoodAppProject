@@ -17,7 +17,7 @@ import com.example.foodappproject.models.DailyMealModel;
 import java.util.ArrayList;
 
 public class DailyMealFragment extends Fragment {
-    RecyclerView dailyMeal_recyclerView;
+    RyclerView dailyMeal_recyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
