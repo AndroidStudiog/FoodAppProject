@@ -33,8 +33,8 @@
         android:label="@string/menu_about_us"
         tools:layout="@layout/fragment_about_us" />
     <fragment
-        android:id="@+id/contactUsFragment"
+        android:id="@+id/nav_contact_us"
         android:name="com.example.foodappproject.ContactUsFragment"
-        android:label="fragment_contact_us"
+        android:label="@string/menu_contact_us"
         tools:layout="@layout/fragment_contact_us" />
 </navigation>
