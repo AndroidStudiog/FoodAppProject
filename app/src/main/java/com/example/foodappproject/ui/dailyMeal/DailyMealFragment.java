@@ -27,7 +27,7 @@ public class DailyMealFragment extends Fragment {
 
         ArrayList<DailyMealModel> list=new ArrayList<>();
         list.add(new DailyMealModel(R.drawable.pizza,"Pizza","Description","20% OFF","pizza"));
-        list.add(new DailyMealModel(R.drawable.burger,"Burger","Description","20% OFF","burger"));
+        list.(new DailyMealModel(R.drawable.burger,"Burger","Description","20% OFF","burger"));
         list.add(new DailyMealModel(R.drawable.ice_cream,"Ice Cream","Description","20% OFF","ice_cream"));
 
         DailyMealAdapter adapter=new DailyMealAdapter(list,getContext());
