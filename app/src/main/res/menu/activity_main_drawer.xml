@@ -24,5 +24,15 @@
             android:title="@string/menu_my_cart"
             android:icon="@drawable/shopping_cart"
             />
+        <item
+            android:id="@+id/nav_about_us"
+            android:title="About Us"
+            android:icon="@drawable/info"
+            />
+        <item
+            android:id="@+id/nav_contact_us"
+            android:title="Contact Us"
+            android:icon="@drawable/phone"
+            />
     </group>
 </menu>
