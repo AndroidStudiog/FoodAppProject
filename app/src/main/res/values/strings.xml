@@ -24,6 +24,8 @@
     <string name="menu_daily_meal">Daily Meal</string>
     <string name="menu_favourite">Favourite</string>
     <string name="menu_my_cart">My cart</string>
+    <string name="menu_about_us">About Us</string>
+    <string name="menu_contact_us">Contact Us</string>
     <string name="menu_logout">Log Out</string>
 
     <string name="_10_00_23_00">10:00-23:00</string>
