@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment implements UpdateVerticalRec {
     ArrayList<HomeHorModel> list1;
     HomeHorAdapter adapter1;
 
-    TextView name;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
