@@ -37,8 +37,7 @@
             android:layout_height="wrap_content"
             android:text="@string/register"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp"
+
             android:textStyle="bold" />
 
         <EditText
