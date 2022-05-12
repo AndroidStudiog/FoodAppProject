@@ -86,7 +86,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="110dp"
-
+            android:background="@drawable/btn_bg_design"
+            android:padding="14dp"
             android:text="@string/register"
             android:textStyle="bold" />
 
