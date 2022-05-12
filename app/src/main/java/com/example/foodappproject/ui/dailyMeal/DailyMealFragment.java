@@ -30,7 +30,7 @@ public class DailyMealFragment extends Fragment {
         list.add(new DailyMealModel(R.drawable.burger,"Burger","Description","20% OFF","burger"));
         list.add(new DailyMealModel(R.drawable.ice_cream,"Ice Cream","Description","20% OFF","ice_cream"));
 
-        DailyMealAdapter adapter=new DailyMealAdapter(list,getContext());
+        DailyMAdapter adapter=new DailyMealAdapter(list,getContext());
         dailyMeal_recyclerView.setAdapter(adapter);
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
