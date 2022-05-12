@@ -110,8 +110,7 @@
                 android:id="@+id/txt_register_sign_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_in"
-                android:textColor="@color/purple_500"
+
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
