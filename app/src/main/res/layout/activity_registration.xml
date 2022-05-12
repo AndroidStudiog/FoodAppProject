@@ -58,7 +58,8 @@
             android:id="@+id/txt_reg_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
             android:drawableLeft="@drawable/email"
             android:drawablePadding="13dp"
             android:hint="@string/email"
