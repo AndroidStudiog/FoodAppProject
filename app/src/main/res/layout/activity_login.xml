@@ -12,7 +12,9 @@
         android:foreground="@drawable/foreground_design"
         android:scaleType="fitXY"
         android:src="@drawable/registration_back" />
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
