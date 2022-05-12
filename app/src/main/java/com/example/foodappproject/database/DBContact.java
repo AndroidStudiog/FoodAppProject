@@ -15,7 +15,7 @@ public class DBContact extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create table Contact(conId integer primary key,conName Text,conEmail Text,conPhoneNo Text,Message Text)");
-    }//
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
