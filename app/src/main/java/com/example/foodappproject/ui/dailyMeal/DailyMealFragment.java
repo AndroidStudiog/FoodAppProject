@@ -20,7 +20,7 @@ public class DailyMealFragment extends Fragment {
     RecyclerView dailyMeal_recyclerView;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public Vw onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_daily_meal, container, false);
 
         dailyMeal_recyclerView=(RecyclerView) view.findViewById(R.id.daily_meal_recyclerview);
