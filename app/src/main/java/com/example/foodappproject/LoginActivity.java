@@ -60,6 +60,11 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                         dialog.dismiss();
+
+                        if (auth.getCurrentUser()!=null){
+                            Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+                            startActivity(intent);
+                        }
                     }
                 });
                 /*
@@ -87,6 +92,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(LoginActivity.this,RegistrationActivity.class);
                 startActivity(intent);
+
             }
         });
     }

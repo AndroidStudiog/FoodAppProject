@@ -1,12 +1,17 @@
 package com.example.foodappproject.ui.home;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -14,22 +19,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodappproject.R;
+import com.example.foodappproject.WelcomeActivity;
 import com.example.foodappproject.adapters.HomeHorAdapter;
 import com.example.foodappproject.adapters.HomeVerAdapter;
 import com.example.foodappproject.adapters.UpdateVerticalRec;
 import com.example.foodappproject.databinding.FragmentHomeBinding;
 import com.example.foodappproject.models.HomeHorModel;
 import com.example.foodappproject.models.HomeVerModel;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
 import java.util.Locale;
 
 public class HomeFragment extends Fragment implements UpdateVerticalRec {
     RecyclerView hor_RecycleVew,ver_RecycleVew;
-    TextView name;
     SearchView searchView;
+    ImageView person;
     ArrayList<HomeHorModel> list1;
     HomeHorAdapter adapter1;
+
+    TextView name;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -58,6 +68,35 @@ public class HomeFragment extends Fragment implements UpdateVerticalRec {
         String mail=intent.getStringExtra("email");
         name.setText(mail);
         */
+
+        person=(ImageView) view.findViewById(R.id.person);
+
+        person.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
+
+                builder.setIcon(R.drawable.man);
+                builder.setTitle("Logout");
+                builder.setMessage("Are you sure want to Logout this app.");
+
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent=new Intent(getContext(), WelcomeActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                builder.show();
+            }
+        });
 
         //////////Horizontal RecycleView
 
@@ -99,7 +138,9 @@ public class HomeFragment extends Fragment implements UpdateVerticalRec {
                 list3.add(item);
             }
         }
+
         adapter1.searchBox(list3);
+
     }
 
     @Override

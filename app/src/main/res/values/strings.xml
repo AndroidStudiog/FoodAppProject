@@ -17,6 +17,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="description">Food-delivery apps allow customers to order from a nearby restaurant at their convenience. The customers can get their order delivered, they can pick it up themselves or they can dine in. The restaurants receive the order on the restaurant app and prepare the meal.</string>
+    <string name="top_features">The following are the top features of food delivery app:</string>
 
     <string name="header_mail">sungi@gmail.com</string>
 
