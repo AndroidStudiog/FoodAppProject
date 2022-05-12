@@ -103,8 +103,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/already_registered"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                 />
 
             <TextView
                 android:id="@+id/txt_register_sign_in"
