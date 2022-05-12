@@ -75,7 +75,9 @@
             android:backgroundTint="@color/white"
             android:drawableLeft="@drawable/vpn_key"
             android:drawablePadding="13dp"
-
+            android:hint="@string/password"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             />
 
         <Button
